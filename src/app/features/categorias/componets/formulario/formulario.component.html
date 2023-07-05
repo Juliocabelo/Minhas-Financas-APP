@@ -1,0 +1,31 @@
+<div class="container">
+
+  <form class="example-form" [formGroup]="formCategoria">
+    <mat-form-field class="example-full-width">
+      <mat-label>Categoria:</mat-label>
+      <input matInput placeholder="Ex. alimentacao" formControlName="nome">
+      <mat-error>Nome da categoria e obrigatorio.</mat-error>
+
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Tipo:</mat-label>
+      <input matInput placeholder="Ex. alimentacao" formControlName="nome">
+      <mat-error>Nome da categoria e obrigatorio.</mat-error>
+
+    </mat-form-field>
+    
+    
+
+    
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Descricao da categoria</mat-label>
+      <textarea matInput placeholder="Digite as informacoes importantes." formControlName="descricao"></textarea>
+      <mat-error>Campo descicao e obrigatorio</mat-error>
+    </mat-form-field>
+  </form>
+
+  <button mat-raised-button color="primary" [disabled]="!formCategoria.valid"
+    (click)="salvarCategoria()">Salvar</button>
+</div>
